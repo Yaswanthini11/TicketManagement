@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.Data.SqlClient;
 
-namespace TicketManagement.Helpers
+namespace TicketManagement.Helpers;
+
+public static class DatabaseHelper
 {
-    internal class DatabaseHelper
-    {
-    }
+    private const string ConnectionString =
+        @"Server=.\SQLEXPRESS;Database=TicketDB;Trusted_Connection=True;TrustServerCertificate=True;";
+
+    public static SqlConnection CreateConnection() => new(ConnectionString);
 }
