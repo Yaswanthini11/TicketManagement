@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace TicketManagement.Models;
 
-namespace TicketManagement.Models
+public class Feedback
 {
-    internal class Feedback
-    {
-    }
+    public int FeedbackId { get; set; }
+    public int TicketId { get; set; }
+    public int Rating { get; set; }
+    public string? Comments { get; set; }
+    public DateTime SubmittedAt { get; set; }
 }
